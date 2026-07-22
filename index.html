@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fatma Ahmed | Frontend Developer</title>
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -48,34 +47,25 @@
     <!-- Preload Critical Fonts -->
     <link
       rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-solid-900.woff2"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-brands-400.woff2"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
 
-    <!-- Font Awesome CSS - Non-render-blocking -->
+    <!-- Font Awesome CSS -->
     <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        crossorigin="anonymous"
-      />
-    </noscript>
 
     <!-- Google Fonts - Non-render-blocking -->
     <link
@@ -91,11 +81,24 @@
       />
     </noscript>
 
-    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6366f1',
+            }
+          }
+        }
+      }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <!-- Main Stylesheet -->
-    <!-- Using local stylesheet in /css -->
     <link rel="stylesheet" href="css/style.css" />
     <style>
       /* Force navbar hover and active to purple with underline */
