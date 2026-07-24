@@ -83,7 +83,29 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <!-- Main Stylesheet -->
+    <!-- Tailwind CSS v3 CDN — provides all missing utility classes (flex, hidden, translate-x-full, etc.) -->
+    <script>
+      // Tailwind v3 config: disable preflight (base reset) so it doesn't conflict with existing styles
+      window.tailwind = window.tailwind || {};
+    </script>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        corePlugins: {
+          preflight: false
+        },
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--color-primary, #6366f1)',
+              secondary: 'var(--color-secondary, #8b5cf6)',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Main Stylesheet (compiled Tailwind v4 + custom styles — overrides CDN where needed) -->
     <link rel="stylesheet" href="css/style.css" />
     <style>
       /* Force navbar hover and active to purple with underline */
